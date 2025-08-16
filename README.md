@@ -34,3 +34,51 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+src/
+│
+├── app/ # النظام الأساسي لـ Next.js (Pages, Routing)
+│ ├── page.tsx # الصفحة الرئيسية
+│ ├── layout.tsx # Layout عام
+│ ├── products/ # صفحة عرض المنتجات
+│ │ └── page.tsx
+│ ├── cart/ # صفحة عربة التسوق
+│ │ └── page.tsx
+│ ├── product/ # صفحة تفاصيل المنتج
+│ │ └── [id]/page.tsx
+│ ├── checkout/ # صفحة الدفع
+│ │ └── page.tsx
+│ ├── account/ # الحساب الشخصي / الطلبات
+│ │ └── page.tsx
+│ └── auth/ # تسجيل الدخول والتسجيل
+│ ├── login/page.tsx
+│ └── signup/page.tsx
+│
+├── components/ # كل المكونات القابلة لإعادة الاستخدام
+│ ├── ui/ # مكونات واجهة الاستخدام
+│ │ ├── Navbar.tsx
+│ │ ├── Footer.tsx
+│ │ ├── Button.tsx
+│ │ ├── ThemeToggle.tsx
+│ │ └── ProductCard.tsx
+│ └── layout/ # مكونات خاصة بالـ layout العام
+│ ├── Container.tsx
+│ └── Section.tsx
+│
+├── lib/ # كود يساعد المشروع (Utils, API, Supabase)
+│ ├── supabaseClient.ts # الاتصال بـ Supabase
+│ ├── helpers.ts # دوال مساعدة (مثلاً: formatPrice)
+│ └── constants.ts # متغيرات عامة
+│
+├── styles/ # ملفات التنسيق
+│ ├── globals.css # ملف CSS الرئيسي
+│ └── tailwind.config.js # إعدادات Tailwind (خارج src غالبًا)
+│
+├── data/ # بيانات وهمية مؤقتة أو JSON محلي
+│ └── products.js
+│
+├── hooks/ # Custom hooks
+│ └── useCart.ts
+│
+└── context/ # Context API (مثل إدارة العربة)
+└── CartContext.tsx
