@@ -31,7 +31,7 @@ export default function Slider() {
         >
           <SwiperSlide className="bg-gray-200">
             <img
-              src={products[0].imageUrl}
+              src={products[0]?.imageUrl}
               alt="..."
               className=" relative left-[25%] object-cover w-[50%] h-[100%]"
             />

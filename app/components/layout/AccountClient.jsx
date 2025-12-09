@@ -41,7 +41,7 @@ function AccountClient() {
 
     try {
       await updateUserData({
-        uid: user.uid,
+        uid: user?.uid,
         firstName,
         lastName,
 

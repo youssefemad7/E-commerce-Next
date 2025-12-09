@@ -12,8 +12,8 @@ export default function ExploreProducts() {
   if (isLoading) return <Loading />;
 
   if (isError) return <p>Failed to load products</p>;
-  const thirdEightProducts = products.slice(17, 25);
-  const fourthEightProducts = products.slice(22, 30);
+  const thirdEightProducts = products?.slice(17, 25);
+  const fourthEightProducts = products?.slice(22, 30);
 
   return (
     <section className="mb-16">

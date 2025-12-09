@@ -6,8 +6,8 @@ import styles from "./SwiperTwo.module.css";
 
 function chunkArray(array, size) {
   const result = [];
-  for (let i = 0; i < array.length; i += size) {
-    result.push(array.slice(i, i + size));
+  for (let i = 0; i < array?.length; i += size) {
+    result.push(array?.slice(i, i + size));
   }
   return result;
 }

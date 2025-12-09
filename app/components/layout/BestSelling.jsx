@@ -14,7 +14,7 @@ export default function BestSelling() {
   if (isLoading) return <Loading />;
 
   if (isError) return <p>Failed to load products</p>;
-  const secondEightProducts = products.slice(9, 17);
+  const secondEightProducts = products?.slice(9, 17);
   return (
     <section className="mb-16">
       <div className="flex items-center gap-4 mb-6 pl-[7%]">
