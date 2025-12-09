@@ -5,14 +5,19 @@ import CardList from "./CardList";
 import styles from "./SwiperTwo.module.css";
 
 function chunkArray(array, size) {
+  if (!array || array.length === 0) return [];
   const result = [];
-  for (let i = 0; i < array?.length; i += size) {
-    result.push(array?.slice(i, i + size));
+  for (let i = 0; i < array.length; i += size) {
+    result.push(array.slice(i, i + size));
   }
   return result;
 }
 
 export default function Slider2({ dummyProducts }) {
+  if (!dummyProducts || dummyProducts.length === 0) {
+    return <div className="text-center py-8">No products available</div>;
+  }
+
   const productsPerSlide = 4;
   const slides = chunkArray(dummyProducts, productsPerSlide);
 
